@@ -14,18 +14,6 @@ Ketika pisang terdeteksi, sistem akan mencatat data ke MySQL dan mengontrol **se
    - Buzzer berbunyi saat pisang **segar** terdeteksi.
 - 🌐 Web Interface dengan Flask untuk menampilkan kamera dan statistik deteksi.
 
----
-
-## 🖼️ Diagram Sistem
-
-```
-Kamera -> YOLOv9 -> Flask Web Server
-                   ↳ Database MySQL
-                   ↳ ESP32 (Servo / Buzzer Control)
-```
-
----
-
 ## ⚙️ Teknologi
 
 - YOLOv9 — Object Detection.

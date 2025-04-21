@@ -1,6 +1,6 @@
 # 🍌 Banana Quality Detection System — YOLO & ESP32
 
-Sistem ini mendeteksi kualitas buah pisang (Segar / Busuk) secara otomatis menggunakan kamera, YOLOv9, ESP32, dan Python Flask.  
+Sistem ini mendeteksi kualitas buah pisang (Segar / Busuk) secara otomatis menggunakan kamera, YOLO, ESP32, dan Python Flask.  
 Ketika pisang terdeteksi, sistem akan mencatat data ke MySQL dan mengontrol **servo motor** atau **buzzer** melalui ESP32.
 
 ---
@@ -75,7 +75,7 @@ Akses melalui browser:
 
 ## 🎯 Tampilan Web
 
-- `/` — Live video dari kamera dengan deteksi YOLOv9.
+- `/` — Live video dari kamera dengan deteksi YOLO.
 - `/get_counts` — API untuk mengambil total deteksi pisang segar & busuk.
 - `/camera_control` — Mengaktifkan atau mematikan kamera.
 
@@ -93,7 +93,7 @@ ESP32 berkomunikasi dengan Python Flask melalui HTTP POST request.
 ## 📌 Catatan
 
 - Pastikan IP ESP32 dan port database dikonfigurasi sesuai pada script Python.
-- YOLOv9 model (`best.pt`) bisa dilatih sendiri atau ganti dengan model deteksi lain sesuai kebutuhan.
+- YOLO model (`best.pt`) bisa dilatih sendiri atau ganti dengan model deteksi lain sesuai kebutuhan.
 - Pastikan kamera terdeteksi di `cv2.VideoCapture()`.
 
 ---

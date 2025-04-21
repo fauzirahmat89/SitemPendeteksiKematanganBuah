@@ -7,7 +7,7 @@ Ketika pisang terdeteksi, sistem akan mencatat data ke MySQL dan mengontrol **se
 
 ## 💡 Fitur Utama
 
-- 📸 Deteksi Otomatis menggunakan YOLOv9.
+- 📸 Deteksi Otomatis menggunakan YOLO.
 - 🗄️ Pencatatan Data ke MySQL (`pisang_segar` & `pisang_busuk`).
 - 🤖 Kontrol Hardware:  
    - Servo bergerak saat pisang **busuk** terdeteksi.
@@ -16,7 +16,7 @@ Ketika pisang terdeteksi, sistem akan mencatat data ke MySQL dan mengontrol **se
 
 ## ⚙️ Teknologi
 
-- YOLOv9 — Object Detection.
+- YOLO — Object Detection.
 - Python + Flask — Web server & pengolahan data.
 - MySQL — Database logging.
 - ESP32 — Kontrol servo & buzzer.
@@ -37,7 +37,7 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-> Pastikan file `best.pt` (YOLOv9 model) tersedia di direktori yang sama.
+> Pastikan file `best.pt` (YOLO model) tersedia di direktori yang sama.
 
 ---
 

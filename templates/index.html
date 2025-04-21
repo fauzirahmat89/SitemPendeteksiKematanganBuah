@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOLOv9 Webcam Detection</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      // Function to fetch real-time counts using AJAX
+      function fetchCounts() {
+        $.ajax({
+          url: "/get_counts", // URL to the Flask route
+          type: "GET", // Request type
+          success: function (data) {
+            // Update the HTML elements with the new counts
+            $("#pisang_segar").text(data.total_segar);
+            $("#pisang_busuk").text(data.total_busuk);
+          },
+        });
+      }
+
+      // Use setInterval to keep fetching the data without delay
+      setInterval(fetchCounts, 1000); // Fetch every 1 second
+    </script>
+  </head>
+  <body>
+    <h1>Real-time Object Detection with YOLOv9</h1>
+
+    <div>
+      <!-- Video feed -->
+      <img src="{{ url_for('video_feed') }}" width="720" height="480" />
+    </div>
+
+    <div>
+      <!-- Form for starting and stopping the camera -->
+      <form method="POST" action="{{ url_for('camera_control') }}">
+        <button type="submit" name="start">Start Camera</button>
+        <button type="submit" name="stop">Stop Camera</button>
+      </form>
+    </div>
+
+    <!-- Display total count of pisang segar and pisang busuk -->
+    <div>
+      <h2>Jumlah Pisang Segar: <span id="pisang_segar">0</span></h2>
+      <h2>Jumlah Pisang Busuk: <span id="pisang_busuk">0</span></h2>
+    </div>
+  </body>
+</html>

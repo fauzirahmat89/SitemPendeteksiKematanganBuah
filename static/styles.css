@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  background-color: #2a7d36;
+}
+.navbar .nav-link {
+  color: #ffffff;
+}
+.title {
+  color: #2a7d36;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.video-container {
+  background-color: #e0e0e0;
+  width: 100%;
+  max-width: 720px;
+  height: 480px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-container {
+  text-align: center;
+  margin: 20px;
+}
+.btn-start {
+  background-color: #2a7d36;
+  color: #fff;
+  margin-right: 10px;
+}
+.btn-stop {
+  background-color: #b52121;
+  color: #fff;
+}
+.data-card {
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2a7d36;
+}
+.card-total {
+  background-color: #d1eefe;
+}
+.card-matang {
+  background-color: #d6f1d0;
+}
+.card-busuk {
+  background-color: #ffdadd;
+}

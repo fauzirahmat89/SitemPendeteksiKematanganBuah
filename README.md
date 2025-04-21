@@ -98,10 +98,6 @@ ESP32 berkomunikasi dengan Python Flask melalui HTTP POST request.
 
 ---
 
-## 📷 Contoh Deteksi
-
-> Tambahkan screenshot hasil deteksi YOLO di sini!
-
 ---
 
 ## 💻 Lisensi
